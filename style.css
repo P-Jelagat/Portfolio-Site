@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav{
+    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    box-shadow: 4px 8px 12px black;
+}
+
+.navLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width:70%;
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: blanchedalmond;
+    transition: 0.1s;
+}
+
+.navLinks a:hover{
+    text-decoration: underline;
+}
+
+nav button{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: blanchedalmond;
+    color: rgb(136, 63, 4);
+    font-weight: bold;
+    transition: 0.2s; 
+}
+
+nav button:hover{
+    cursor: pointer;
+    box-shadow: 3px 6px 10px black;
+}
+
+nav button:active{
+    opacity: 0.5;
+}
+
+.mediaLinks img{
+    height: 40px;
+    width: 40px;
+}
+
+.intro{
+   background-image: url("/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
+   background-size: cover;
+   background-position: left;
+   display: flex;
+   min-height: 300px;
+   height: 100vh;
+}
+
+#summary{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.text {
+    font-weight: 600;
+    font-size: 40px;
+    color: blanchedalmond;
+}
+
+.mediaLinks{
+    display: flex;
+    gap: 15px;
+
+}
+
+.mediaLinks img:hover{
+    transition: 0.3s;
+    filter: drop-shadow(0 0 15px white);
+}
+
+.buttons button{
+    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    color: blanchedalmond;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button:hover{
+    color: white;
+    box-shadow: 3px 6px 9px black;
+
+}
+
+.buttons button:active{
+    opacity: 0.5;
+}
