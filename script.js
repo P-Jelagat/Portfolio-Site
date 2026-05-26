@@ -18,22 +18,6 @@ function moveUnderline(link){
     underline.style.left = `${link.offsetLeft}px`;
 };
 
-/*function switchSection(newIndex){
-    const currentSection = sections[currentIndex];
-    const nextSection = sections[newIndex];
-    currentSection.classList.remove("activeSection");
-    if(newIndex > currentIndex){
-        nextSection.style.transform = "translateX(100%)";
-    }else{
-        nextSection.style.transform = "translateX(-100%)";
-    }
-
-    setTimeout(() => {
-        nextSection.classList.add("activeSection");
-    }, 10);
-
-    currentIndex = newIndex;
-}*/
 
 function switchSection(newIndex){
 
@@ -42,33 +26,36 @@ function switchSection(newIndex){
     const currentSection = sections[currentIndex];
     const nextSection = sections[newIndex];
 
-    // Reset next section instantly
+    const movingRight = newIndex > currentIndex;
+
+    // Remove old animation classes
+    nextSection.classList.remove("slideLeft", "slideRight");
+
+    // Disable transition temporarily
     nextSection.style.transition = "none";
 
-    if(newIndex > currentIndex){
-        nextSection.style.transform = "translateX(100%)";
-    } else {
-        nextSection.style.transform = "translateX(-100%)";
-    }
+    // Set incoming direction
+    nextSection.classList.add(
+        movingRight ? "slideRight" : "slideLeft"
+    );
 
     nextSection.style.opacity = "1";
 
-    // Force browser repaint
+    // Force repaint
     nextSection.offsetHeight;
 
     // Re-enable transition
     nextSection.style.transition = "0.5s ease";
 
-    // Slide current out
-    if(newIndex > currentIndex){
-        currentSection.style.transform = "translateX(-100%)";
-    } else {
-        currentSection.style.transform = "translateX(100%)";
-    }
+    // Animate current section out
+    currentSection.style.transform =
+        movingRight
+        ? "translateX(-100%)"
+        : "translateX(100%)";
 
     currentSection.style.opacity = "0";
 
-    // Bring next in
+    // Bring next section into view
     nextSection.style.transform = "translateX(0)";
 
     currentIndex = newIndex;
