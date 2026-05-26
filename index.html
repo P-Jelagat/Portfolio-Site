@@ -17,11 +17,13 @@
 
             <div class="navLinks">
                 
-                <a href="index.html">Home</a>
-                <a href="">About Me</a>
-                <a href="">Projects</a>
-                <a href="">Services</a>
-                <a href="">Contact Me</a>
+                <a class="navLink active" data-section="home">Home</a>
+                <a class="navLink" data-section="about">About Me</a>
+                <a class="navLink" data-section="projects">Projects</a>
+                <a class="navLink" data-section="services">Services</a>
+                <a class="navLink" data-section="contact">Contact Me</a>
+
+                <div class="underline"></div>
                 
             </div>
 
@@ -29,12 +31,12 @@
 
 
         </nav>
+     
+      <main>
 
-<!--Contains the Homepage contents-->
 
-        <div class="intro">
-
-            <section id="summary">
+<!--Contains the page contents-->
+            <section id="home" class="section activeSection">
 
                 <div class="text">
                    <p>Hello,</p>
@@ -55,23 +57,27 @@
                     <button>View Resume</button>
                 </div>
 
+            </section> 
+
+            
+            <section id="about" class="section">
+                <h1>About section</h1>
+            </section>
+
+            <section id="projects" class="section">
+                <h1>Projects section</h1>
+            </section>
+
+            <section id="services" class="section">
+                <h1>Services section</h1>
+            </section>
+
+            <section id="contact" class="section">
+                <h1>Contact section</h1>
             </section>
 
 
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-
+      </main>
 
     </div>
 

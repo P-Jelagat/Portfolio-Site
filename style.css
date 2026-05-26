@@ -14,25 +14,39 @@ nav{
     background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
     display: flex;
     padding: 10px;
+    position: relative;
     justify-content: space-between;
     box-shadow: 4px 8px 12px black;
 }
 
 .navLinks{
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: end;
     width:70%;
 }
 
-.navLinks a{
+.navLink{
+   
     text-decoration: none;
     color: blanchedalmond;
-    transition: 0.1s;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.navLinks a:hover{
-    text-decoration: underline;
+.navLink:hover{
+    color: whitesmoke;
+}
+
+.underline{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 60px;
+    background: blanchedalmond;
+    transition: 0.4s ease;
 }
 
 nav button{
@@ -59,17 +73,41 @@ nav button:active{
     width: 40px;
 }
 
-.intro{
+main{
    background-image: url("/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
    background-size: cover;
    background-position: left;
-   display: flex;
    min-height: 300px;
    height: 100vh;
+   position: relative;
+   overflow: hidden;
 }
 
-#summary{
-    padding-left: 20px;
+.section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.5s ease;
+}
+
+.activeSection{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slideLeft{
+    transform: translateX(-100%);
+}
+
+.slideRight{
+    transform: translateX(100%);
+}
+
+#home{
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +128,7 @@ nav button:active{
 }
 
 .mediaLinks img:hover{
-    transition: 0.3s;
+    transition: 0.3s ease;
     filter: drop-shadow(0 0 15px white);
 }
 
