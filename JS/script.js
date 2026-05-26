@@ -60,3 +60,4 @@ function switchSection(newIndex){
 
     currentIndex = newIndex;
 }
+
