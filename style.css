@@ -28,7 +28,6 @@ nav{
 }
 
 .navLink{
-   
     text-decoration: none;
     color: blanchedalmond;
     cursor: pointer;
@@ -81,6 +80,7 @@ main{
    height: 100vh;
    position: relative;
    overflow: hidden;
+   display: flex;
 }
 
 .section{
@@ -122,13 +122,13 @@ main{
 }
 
 .mediaLinks{
+    color: blanchedalmond;
     display: flex;
     gap: 15px;
-
+    transition: 0.3s ease;
 }
 
 .mediaLinks img:hover{
-    transition: 0.3s ease;
     filter: drop-shadow(0 0 15px white);
 }
 
@@ -146,10 +146,83 @@ main{
 
 .buttons button:hover{
     color: white;
-    box-shadow: 3px 6px 9px black;
+    box-shadow: 3px 6px 9px rgba(0,0,0,0.8);
 
 }
 
 .buttons button:active{
+    opacity: 0.5;
+}
+
+#contact{
+    display: flex;
+    background-image: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    height: 100vh;
+    justify-content: center;
+    padding: 40px;
+    gap: 4em;
+}
+
+#contact .mediaLinks{
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: blanchedalmond;
+    padding: 20px;
+    min-height: 60%;
+    height: fit-content;
+    border-radius: 5px;
+    color: rgb(86, 50, 28);
+}
+
+form input,
+textarea{
+    padding: 8px 4px;
+    border: 1px solid black;
+    border-radius: 2px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+form input:focus, 
+textarea:focus{
+    outline: none;
+    border: 1px solid brown;
+    box-shadow: 0 0 10px rgba(208, 78, 3, 0.5);
+}
+
+form textarea{
+    min-height: 100px;
+}
+
+form button, 
+p{
+    align-self: flex-end;
+}
+
+form button{
+    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    color: blanchedalmond;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover{
+    color: white;
+    box-shadow: 3px 6px 9px rgba(0,0,0,0.8);
+
+}
+
+form button:active{
     opacity: 0.5;
 }
