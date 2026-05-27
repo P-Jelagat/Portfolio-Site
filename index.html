@@ -36,6 +36,7 @@
 
 
 <!--Contains the page contents-->
+         <!--This is the Home section-->
             <section id="home" class="section activeSection">
 
                 <div class="text">
@@ -60,19 +61,22 @@
 
             </section> 
 
-            
+            <!--This is the About Me section-->
             <section id="about" class="section">
                 <h1>About section</h1>
             </section>
 
+            <!--This is the Projects section-->
             <section id="projects" class="section">
                 <h1>Projects section</h1>
             </section>
 
+            <!--This is the Services section-->
             <section id="services" class="section">
                 <h1>Services section</h1>
             </section>
 
+            <!--This is the Contact Me section-->
             <section id="contact" class="section">
 
                 <div class="mediaLinks">
@@ -91,8 +95,8 @@
                     <label for="email">Please enter contact email: </label>
                     <input type="Email" placeholder="'e.g nyotameats@gmail.com'" required>
                     <label for="textarea">What service do you need?:</label>
-                    <textarea name="" id="textarea" required placeholder="Describe the type of website, features, colors, or functionality you want." ></textarea>
-                    <p>Character count:<span>0</span>/500</p>
+                    <textarea name="" id="textarea" required  maxlength="500" placeholder="Describe the type of website, features, colors, or functionality you want." ></textarea>
+                    <p>Character count:<span id="count">0</span>/500</p>
                     <button id="send">Submit</button>
 
                 </form>
