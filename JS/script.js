@@ -4,6 +4,7 @@ const underline = document.querySelector(".underline");
 
 let currentIndex = 0;
 
+//Places underline on home link
 moveUnderline(links[0]);
 
 links.forEach((link,index) => {

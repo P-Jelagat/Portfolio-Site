@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 nav img{
     height: 30px;
     width: 30px;
@@ -14,9 +15,10 @@ nav{
     background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
     display: flex;
     padding: 10px;
-    position: relative;
     justify-content: space-between;
-    box-shadow: 4px 8px 12px black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navLinks{
@@ -67,17 +69,12 @@ nav button:active{
     opacity: 0.5;
 }
 
-.mediaLinks img{
-    height: 40px;
-    width: 40px;
-}
 
 main{
    background-image: url("/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
    background-size: cover;
    background-position: left;
-   min-height: 300px;
-   height: 100vh;
+   min-height: 100vh;
    position: relative;
    overflow: hidden;
    display: flex;
@@ -88,6 +85,8 @@ main{
     top: 0;
     left: 0;
     width: 100%;
+    min-height: 100vh;
+    height: auto;
     opacity: 0;
     transform: translateX(100%);
     transition: 0.5s ease;
@@ -106,11 +105,13 @@ main{
     transform: translateX(100%);
 }
 
+/*HOME SECTION*/
+
 #home{
-    padding: 30px;
+    padding: 50px 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 30px;
 
 }
@@ -126,6 +127,11 @@ main{
     display: flex;
     gap: 15px;
     transition: 0.3s ease;
+}
+
+.mediaLinks img{
+    height: 40px;
+    width: 40px;
 }
 
 .mediaLinks img:hover{
@@ -154,28 +160,31 @@ main{
     opacity: 0.5;
 }
 
+/*CONTACT SECTION*/
+
 #contact{
     display: flex;
     background-image: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
-    height: 100vh;
     justify-content: center;
     padding: 40px;
-    gap: 4em;
 }
 
 #contact .mediaLinks{
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 form{
+    flex: 2;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
     background-color: blanchedalmond;
     padding: 20px;
     min-height: 60%;
-    height: fit-content;
+    height: auto;
+    max-width: 500px ;
     border-radius: 5px;
     color: rgb(105, 61, 34);
 }
@@ -225,4 +234,209 @@ form button:hover{
 
 form button:active{
     opacity: 0.5;
+}
+
+/*ABOUT SECTION*/
+
+#about{
+    padding: 25px 50px;
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+}
+
+.aboutContainer{
+    background-color: black;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.aboutTag{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #d6a46d;
+    font-size: 14px;
+}
+
+.aboutContainer h1{
+    font-size: 2.5rem;
+    line-height: 1.2;
+    max-width: 600px;
+}
+
+.aboutText{
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.8);
+    max-width: 550px;
+}
+
+.aboutStats{
+    display: flex;
+    gap: 2rem;
+    margin-top: 10px;
+}
+
+.stat{
+    background: rgba(255,255,255,0.08);
+    padding: 15px 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.stat h2{
+    font-size: 2rem;
+    color: blanchedalmond;
+}
+
+.stat p{
+    color: rgba(255,255,255,0.7);
+}
+
+/*PROJECTS SECTION*/
+
+#projects{
+    height: fit-content;
+    padding: 60px;
+    color: blanchedalmond;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+}
+
+.projectsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.projectsHeader{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.projectTag{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #d6a46d;
+    font-size: 14px;
+}
+
+.projectsHeader h1{
+    font-size: 3rem;
+    max-width: 700px;
+    line-height: 1.2;
+}
+
+/* FEATURED PROJECT */
+
+.featuredProject{
+    display: flex;
+    gap: 2rem;
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.featuredProject img{
+    width: 50%;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+.featuredContent{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.featuredLabel{
+    color: #d6a46d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.featuredContent h2{
+    font-size: 2.5rem;
+}
+
+.featuredContent p{
+    color: rgba(255,255,255,0.8);
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+/* BUTTONS */
+
+.projectButtons{
+    display: flex;
+    gap: 15px;
+}
+
+.projectButtons button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    color: blanchedalmond;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.projectButtons button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* PROJECT GRID */
+
+.projectGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+.projectCard{
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.projectCard:hover{
+    transform: translateY(-10px);
+}
+
+.projectCard img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.cardContent{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardContent p{
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
 }
