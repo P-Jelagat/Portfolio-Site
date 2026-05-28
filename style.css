@@ -3,7 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body{
+    background: url(/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/* NAV BAR */
 nav img{
     height: 30px;
     width: 30px;
@@ -16,38 +21,33 @@ nav{
     display: flex;
     padding: 10px;
     justify-content: space-between;
+    box-shadow: 4px 8px 12px  rgba(0,0,0, 0.5);
     position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
 }
 
 .navLinks{
     display: flex;
-    position: relative;
     justify-content: space-between;
     align-items: end;
     width:70%;
 }
 
-.navLink{
+.navLinks a{
     text-decoration: none;
     color: blanchedalmond;
-    cursor: pointer;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
-.navLink:hover{
-    color: whitesmoke;
+.navLinks a:hover{
+    text-decoration: underline;
 }
 
-.underline{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 60px;
-    background: blanchedalmond;
-    transition: 0.4s ease;
+.navLinks a:active{
+    opacity: 0.6;
 }
 
 nav button{
@@ -69,49 +69,41 @@ nav button:active{
     opacity: 0.5;
 }
 
+/* HOMEPAGE */
+.mediaLinks img{
+    height: 40px;
+    width: 40px;
+}
 
-main{
-   background-image: url("/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
+.intro{
+
    background-size: cover;
    background-position: left;
-   min-height: 100vh;
-   position: relative;
-   overflow: hidden;
    display: flex;
+   justify-content: center;
+   flex-direction: row-reverse;
+   min-height: 100vh;
+   gap: 40px;
 }
 
-.section{
-    position: absolute;
-    top: 0;
-    left: 0;
+.homeImage{
+    flex: 1;
+}
+
+.homeImage img{
     width: 100%;
-    min-height: 100vh;
-    height: auto;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: 0.5s ease;
+    max-width: 500px;
+    height: 100%;
+    display: block;
+    position: center;
 }
 
-.activeSection{
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.slideLeft{
-    transform: translateX(-100%);
-}
-
-.slideRight{
-    transform: translateX(100%);
-}
-
-/*HOME SECTION*/
-
-#home{
-    padding: 50px 30px;
+#summary{
+    flex: 1;
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 30px;
 
 }
@@ -123,18 +115,13 @@ main{
 }
 
 .mediaLinks{
-    color: blanchedalmond;
     display: flex;
     gap: 15px;
-    transition: 0.3s ease;
-}
 
-.mediaLinks img{
-    height: 40px;
-    width: 40px;
 }
 
 .mediaLinks img:hover{
+    transition: 0.3s;
     filter: drop-shadow(0 0 15px white);
 }
 
@@ -142,6 +129,7 @@ main{
     background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
     color: blanchedalmond;
     padding: 10px 20px;
+    margin-top: 30px;
     margin-right: 20px;
     border: none;
     font-weight: bold;
@@ -152,7 +140,7 @@ main{
 
 .buttons button:hover{
     color: white;
-    box-shadow: 3px 6px 9px rgba(0,0,0,0.8);
+    box-shadow: 3px 6px 9px black;
 
 }
 
@@ -160,283 +148,337 @@ main{
     opacity: 0.5;
 }
 
-/*CONTACT SECTION*/
 
+/*CONTACT FORM*/
 #contact{
-    display: flex;
-    background-image: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
-    justify-content: center;
-    padding: 40px;
-}
-
-#contact .mediaLinks{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-form{
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: blanchedalmond;
-    padding: 20px;
-    min-height: 60%;
-    height: auto;
-    max-width: 500px ;
-    border-radius: 5px;
-    color: rgb(105, 61, 34);
-}
-
-form input,
-textarea{
-    padding: 8px 4px;
-    border: 1px solid black;
-    border-radius: 2px;
-    box-sizing: border-box;
-    transition: 0.3s ease;
-}
-
-form input:focus, 
-textarea:focus{
-    outline: none;
-    border: 1px solid brown;
-    box-shadow: 0 0 10px rgba(208, 78, 3, 0.5);
-}
-
-form textarea{
-    min-height: 100px;
-}
-
-form button, 
-p{
-    align-self: flex-end;
-}
-
-form button{
     background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
-    color: blanchedalmond;
-    padding: 10px 20px;
-    margin-right: 20px;
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
+}
+
+#contactNav{
+    box-shadow: none;
+}
+
+#contact h1{
+    margin-bottom: 20px;
+    text-align: center;
+    color: floralwhite;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 10px;
+    
+}
+@media(max-width:500px){
+    .options{
+        flex-direction: column-reverse;
+    }
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: floralwhite;
+}
+.icons ul li{
+    list-style: none;
+    margin: 10px;
+    color: black;
+}
+.icons h2{
+    text-decoration: underline;
+}
+.icons img{
+    max-height: 40px;
+    max-width: 40px;
+    margin-right: 5px;
+}
+.icons a{
+    text-decoration: none;
+    color: floralwhite;
     transition: 0.3s;
 }
-
-form button:hover{
-    color: white;
-    box-shadow: 3px 6px 9px rgba(0,0,0,0.8);
+.icons a:hover{
+    text-shadow: 4px 6px 12px aliceblue;
+    text-decoration: underline;
 
 }
+.icons a:active{
+    transition: 0.1s;
+    color: black;
 
-form button:active{
-    opacity: 0.5;
 }
-
-/*ABOUT SECTION*/
-
-#about{
-    padding: 25px 50px;
-    display: flex;
-    justify-content: center;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(3px);
-}
-
-.aboutContainer{
-    background-color: black;
-    padding: 30px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: fit-content;
-    color: blanchedalmond;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.aboutTag{
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #d6a46d;
-    font-size: 14px;
-}
-
-.aboutContainer h1{
-    font-size: 2.5rem;
-    line-height: 1.2;
-    max-width: 600px;
-}
-
-.aboutText{
-    font-size: 1rem;
-    line-height: 1.8;
-    color: rgba(255,255,255,0.8);
-    max-width: 550px;
-}
-
-.aboutStats{
-    display: flex;
-    gap: 2rem;
-    margin-top: 10px;
-}
-
-.stat{
-    background: rgba(255,255,255,0.08);
-    padding: 15px 25px;
-    border-radius: 12px;
-    backdrop-filter: blur(5px);
-}
-
-.stat h2{
-    font-size: 2rem;
-    color: blanchedalmond;
-}
-
-.stat p{
-    color: rgba(255,255,255,0.7);
-}
-
-/*PROJECTS SECTION*/
-
-#projects{
-    height: fit-content;
-    padding: 60px;
-    color: blanchedalmond;
-    overflow-y: auto;
-    background: rgba(0,0,0,0.45);
-    backdrop-filter: blur(4px);
-}
-
-.projectsContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.projectsHeader{
+form{
     display: flex;
     flex-direction: column;
     gap: 15px;
+    background-color: blanchedalmond;
+    padding: 20px;
+    border-radius: 3px;
+    
+}
+form input{
+    max-width: 300px;
+    padding: 8px;
+    border: 1px solid black;
+}
+textarea{
+    max-width: 350px;
+    min-height: 150px ;
+    padding: 5px;
+}
+#submitBtn{
+    max-width: 60px;
+    padding: 8px;
+    cursor: pointer;
+    color: floralwhite;
+    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png );
+    border: none;
+    border-radius: 2px;
+    transition: 0.3s;
+    align-self: flex-end;
+}
+#submitBtn:hover{
+    box-shadow: 3px 5px 9px black;
+}
+#submitBtn:active{
+    transition: 0.1s;
+    opacity: 0.5;
+}
+input:focus,
+textarea:focus{
+
+    outline: none;
+
+    border: 1px solid rgb(181, 92, 92);
+
+    box-shadow: 0 0 10px rgba(181, 92, 92, 0.4);
+
 }
 
-.projectTag{
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #d6a46d;
-    font-size: 14px;
+
+/*
+:root{
+    --cream: blanchedalmond;
+    --white: floralwhite;
+    --brown: rgb(136, 63, 4);
 }
 
-.projectsHeader h1{
-    font-size: 3rem;
-    max-width: 700px;
-    line-height: 1.2;
+section{
+    padding: 80px 10%;
 }
 
-/* FEATURED PROJECT */
+/* ABOUT PAGE CONTAINER */
 
-.featuredProject{
-    display: flex;
-    gap: 2rem;
+#about{
+    min-height: 100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+
+    url("/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* SECTION LAYOUT */
+
+#about section{
+
     background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
     border-radius: 20px;
-    overflow: hidden;
-    backdrop-filter: blur(5px);
-}
 
-.featuredProject img{
-    width: 50%;
-    object-fit: cover;
-    min-height: 400px;
-}
-
-.featuredContent{
     padding: 40px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
+    transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+    color: floralwhite;
+
+    flex: 1;
+}
+
+/* HOVER EFFECT */
+
+#about section:hover{
+
+    transform: translateY(-12px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.45);
+
+}
+
+/* ABOUT PAGE LAYOUT */
+
+.aboutSections{
+    padding: 40px;
+
     display: flex;
+
+    gap: 30px;
+
+    align-items: stretch;
+
+    margin-top: 60px;
+
+}
+
+/* HERO SECTION */
+
+.aboutHero{
+
+    display: flex;
+
     flex-direction: column;
+
     justify-content: center;
-    gap: 20px;
 }
 
-.featuredLabel{
-    color: #d6a46d;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.aboutHero h1{
+
+    font-size: 3.5rem;
+
+    margin-bottom: 20px;
+
+    text-align: left;
 }
 
-.featuredContent h2{
-    font-size: 2.5rem;
-}
+.aboutHero p{
 
-.featuredContent p{
-    color: rgba(255,255,255,0.8);
     line-height: 1.8;
-    max-width: 500px;
+
+    margin-bottom: 20px;
+
+    color: rgba(255,255,255,0.85);
 }
 
 /* BUTTONS */
 
-.projectButtons{
+.aboutBtns{
+
     display: flex;
+
     gap: 15px;
+
+    flex-wrap: wrap;
 }
 
-.projectButtons button{
+.aboutBtns button{
+
     padding: 12px 20px;
+
     border: none;
+
     border-radius: 8px;
-    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
-    color: blanchedalmond;
+
+    cursor: pointer;
+
+    background-color: blanchedalmond;
+
+    color: rgb(136, 63, 4);
+
     font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
+
+    transition: 0.3s;
 }
 
-.projectButtons button:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+.aboutBtns button:hover{
+
+    transform: scale(1.05);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* PROJECT GRID */
+/* JOURNEY */
 
-.projectGrid{
+.journey h2,
+.skillsSection h2{
+
+    margin-bottom: 25px;
+
+    font-size: 2rem;
+}
+
+.journey p{
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+    color: rgba(255,255,255,0.85);
+}
+
+/* SKILLS */
+
+.skillsGrid{
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 25px;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(140px,1fr));
+
+    gap: 20px;
 }
 
-.projectCard{
-    background: rgba(255,255,255,0.08);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: 0.3s ease;
-    cursor: pointer;
-    backdrop-filter: blur(5px);
-}
+.skillCard{
 
-.projectCard:hover{
-    transform: translateY(-10px);
-}
+    background: rgba(255,255,255,0.12);
 
-.projectCard img{
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
+    border: 1px solid rgba(255,255,255,0.15);
 
-.cardContent{
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+    color: floralwhite;
 }
 
-.cardContent p{
-    color: rgba(255,255,255,0.7);
-    line-height: 1.6;
+.skillCard:hover{
+
+    transform: translateY(-8px);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.4);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    .aboutSections{
+
+        flex-direction: column;
+    }
+
+    .aboutHero h1{
+
+        font-size: 2.8rem;
+    }
+
 }
