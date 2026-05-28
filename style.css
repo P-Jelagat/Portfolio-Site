@@ -51,23 +51,26 @@ nav{
 }
 
 nav button{
-    padding: 5px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: blanchedalmond;
-    color: rgb(136, 63, 4);
+    color:  rgba(136, 63, 4, 0.8);
     font-weight: bold;
-    transition: 0.2s; 
+    transition: 0.2s;
+    cursor: pointer; 
 }
 
 nav button:hover{
-    cursor: pointer;
+    transform: translateY(-5px);
     box-shadow: 3px 6px 10px black;
+    color: rgb(136, 63, 4) ;
 }
 
 nav button:active{
     opacity: 0.5;
 }
+
 
 /* HOMEPAGE */
 .mediaLinks img{
@@ -81,9 +84,22 @@ nav button:active{
    background-position: left;
    display: flex;
    justify-content: center;
+   align-items: center;
    flex-direction: row-reverse;
    min-height: 100vh;
    gap: 40px;
+   padding: 60px;
+   overflow: hidden;
+   background: linear-gradient(
+    to left,
+        rgba(0,0,0, 0.05) 0%,
+        rgba(0,0,0, 0.12) 20%,
+        rgba(0,0,0, 0.25) 40%,
+        rgba(0,0, 0, 0.55) 65%,
+        rgba(0,0,0, 0.75) 100%
+   );
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
 }
 
 .homeImage{
@@ -93,9 +109,10 @@ nav button:active{
 .homeImage img{
     width: 100%;
     max-width: 500px;
-    height: 100%;
+    height: auto;
     display: block;
-    position: center;
+    object-fit: fill;
+    border-radius: 150px;
 }
 
 #summary{
@@ -125,11 +142,14 @@ nav button:active{
     filter: drop-shadow(0 0 15px white);
 }
 
+.buttons{
+    display: flex;
+}
+
 .buttons button{
     background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
     color: blanchedalmond;
     padding: 10px 20px;
-    margin-top: 30px;
     margin-right: 20px;
     border: none;
     font-weight: bold;
@@ -138,8 +158,10 @@ nav button:active{
     transition: 0.3s;
 }
 
+
 .buttons button:hover{
     color: white;
+    transform: translateY(-5px);
     box-shadow: 3px 6px 9px black;
 
 }
@@ -151,7 +173,7 @@ nav button:active{
 
 /*CONTACT FORM*/
 #contact{
-    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    background-image: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
 }
 
 #contactNav{
@@ -216,6 +238,7 @@ form{
     background-color: blanchedalmond;
     padding: 20px;
     border-radius: 3px;
+    box-shadow: 4px 8px 16px;
     
 }
 form input{
@@ -258,16 +281,13 @@ textarea:focus{
 }
 
 
-/*
+
 :root{
     --cream: blanchedalmond;
     --white: floralwhite;
     --brown: rgb(136, 63, 4);
 }
 
-section{
-    padding: 80px 10%;
-}
 
 /* ABOUT PAGE CONTAINER */
 
@@ -390,9 +410,9 @@ section{
 
     cursor: pointer;
 
-    background-color: blanchedalmond;
+    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
 
-    color: rgb(136, 63, 4);
+    color: blanchedalmond;
 
     font-weight: bold;
 
@@ -401,9 +421,8 @@ section{
 
 .aboutBtns button:hover{
 
-    transform: scale(1.05);
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    
+    box-shadow: 0 8px 20px black;
 }
 
 /* JOURNEY */
@@ -481,4 +500,199 @@ section{
         font-size: 2.8rem;
     }
 
+}
+
+/* PROJECTS PAGE */
+
+#projectsPage{
+
+    min-height: 100vh;
+
+    padding: 140px 60px 60px;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    ),
+
+    url("/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+/* TITLE */
+
+.projectsTitle{
+
+    color: floralwhite;
+
+    font-size: 4rem;
+
+    margin-bottom: 60px;
+
+    text-align: center;
+}
+
+/* PROJECT GRID */
+
+.projectsContainer{
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap: 40px;
+}
+
+/* GLASS CARDS */
+
+.projectCard{
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.3);
+
+    transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* HOVER EFFECT */
+
+.projectCard:hover{
+
+    transform: translateY(-12px);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,0.5);
+}
+
+/* IMAGES */
+
+.projectCard img{
+
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+}
+
+/* CONTENT */
+
+.projectInfo{
+
+    padding: 30px;
+
+    color: floralwhite;
+}
+
+.projectInfo h2{
+
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+}
+
+.projectInfo p{
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+    color: rgba(255,255,255,0.85);
+}
+
+/* TECH STACK */
+
+.stack{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.stack span{
+
+    background: rgba(255,255,255,0.12);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+}
+
+/* BUTTONS */
+
+.projectBtns{
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.projectBtns a{
+
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    border-radius: 10px;
+
+    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+
+    color: blanchedalmond;
+
+    font-weight: bold;
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.35);
+
+    transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.projectBtns a:hover{
+
+    box-shadow: 5px 10px 20px black;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    #projectsPage{
+
+        padding: 120px 20px 40px;
+    }
+
+    .projectsTitle{
+
+        font-size: 3rem;
+    }
 }
