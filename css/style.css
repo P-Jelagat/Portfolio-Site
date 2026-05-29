@@ -77,7 +77,7 @@ nav button:active{
 .underline{
     position: absolute;
     height: 3px;
-    min-width: 40px;
+    width: 0px;
     background-color: blanchedalmond;
     border-radius: 10px;
     transition: 0.4s ease;
@@ -700,5 +700,41 @@ textarea:focus{
 
     box-shadow: 0 0 10px rgba(181, 92, 92, 0.4);
 
+}
+
+
+/* FOR PAGE TRANSITIONS */
+
+/* Only one page on display at time */
+.page{
+    display: none;
+    width: 100%;
+}
+
+.page.activePage{
+    display: block;
+}
+
+.pageContent{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.7s ease;
+}
+
+/* left and right entry */
+.fromLeft{
+    transform: translateX(-120px);
+    opacity: 1;
+}
+
+.fromRight{
+    transform: translateX(120px);
+    opacity: 1;
+}
+
+/* visible state */
+.showPage{
+    transform: translateX(0);
+    opacity: 1;
 }
 
