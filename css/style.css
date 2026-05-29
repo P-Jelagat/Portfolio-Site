@@ -21,7 +21,6 @@ nav{
     display: flex;
     padding: 10px;
     justify-content: space-between;
-    box-shadow: 4px 8px 12px  rgba(0,0,0, 0.5);
     position: sticky;
     top: 0;
     left: 0;
@@ -31,22 +30,24 @@ nav{
 
 .navLinks{
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: end;
     width:70%;
 }
 
-.navLinks a{
+.navLink{
+    position: relative;
     text-decoration: none;
     color: blanchedalmond;
     transition: 0.1s;
 }
 
-.navLinks a:hover{
-    text-decoration: underline;
+.navLink:hover{
+    color: white;
 }
 
-.navLinks a:active{
+.navLink:active{
     opacity: 0.6;
 }
 
@@ -72,6 +73,16 @@ nav button:active{
 }
 
 
+/* STYLING THE UNDERLINE */
+.underline{
+    position: absolute;
+    height: 3px;
+    min-width: 40px;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+}
+
+
 /* HOMEPAGE */
 .mediaLinks img{
     height: 40px;
@@ -79,8 +90,6 @@ nav button:active{
 }
 
 #home{
-   background: url(/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg);
-   background-size: cover;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -89,16 +98,17 @@ nav button:active{
    gap: 40px;
    padding: 60px;
    overflow: hidden;
-   background: linear-gradient(
-    to left,
-        rgba(0,0,0, 0.05) 0%,
-        rgba(0,0,0, 0.12) 20%,
-        rgba(0,0,0, 0.25) 40%,
-        rgba(0,0, 0, 0.55) 65%,
-        rgba(0,0,0, 0.75) 100%
-   );
-   backdrop-filter: blur(10px);
-   -webkit-backdrop-filter: blur(10px);
+   background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+
+    url("/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
+
+    background-size: cover;
+    background-position: left;
+
 }
 
 .homeImage{
@@ -192,7 +202,7 @@ nav button:active{
 
     background-size: cover;
     background-position: center;
-        padding: 40px;
+    padding: 40px;
 
     display: flex;
 
@@ -584,6 +594,7 @@ nav button:active{
 /*CONTACT FORM*/
 #contact{
     background-image: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    padding-top: 2em;
 }
 
 #contactNav{
