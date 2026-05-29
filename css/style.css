@@ -78,10 +78,9 @@ nav button:active{
     width: 40px;
 }
 
-.intro{
-
+#home{
+   background: url(/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg);
    background-size: cover;
-   background-position: left;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -171,117 +170,6 @@ nav button:active{
 }
 
 
-/*CONTACT FORM*/
-#contact{
-    background-image: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
-}
-
-#contactNav{
-    box-shadow: none;
-}
-
-#contact h1{
-    margin-bottom: 20px;
-    text-align: center;
-    color: floralwhite;
-}
-.options{
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    padding: 10px;
-    
-}
-@media(max-width:500px){
-    .options{
-        flex-direction: column-reverse;
-    }
-}
-.icons{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: floralwhite;
-}
-.icons ul li{
-    list-style: none;
-    margin: 10px;
-    color: black;
-}
-.icons h2{
-    text-decoration: underline;
-}
-.icons img{
-    max-height: 40px;
-    max-width: 40px;
-    margin-right: 5px;
-}
-.icons a{
-    text-decoration: none;
-    color: floralwhite;
-    transition: 0.3s;
-}
-.icons a:hover{
-    text-shadow: 4px 6px 12px aliceblue;
-    text-decoration: underline;
-
-}
-.icons a:active{
-    transition: 0.1s;
-    color: black;
-
-}
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background-color: blanchedalmond;
-    padding: 20px;
-    border-radius: 3px;
-    box-shadow: 4px 8px 16px;
-    
-}
-form input{
-    max-width: 300px;
-    padding: 8px;
-    border: 1px solid black;
-}
-textarea{
-    max-width: 350px;
-    min-height: 150px ;
-    padding: 5px;
-}
-#submitBtn{
-    max-width: 60px;
-    padding: 8px;
-    cursor: pointer;
-    color: floralwhite;
-    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png );
-    border: none;
-    border-radius: 2px;
-    transition: 0.3s;
-    align-self: flex-end;
-}
-#submitBtn:hover{
-    box-shadow: 3px 5px 9px black;
-}
-#submitBtn:active{
-    transition: 0.1s;
-    opacity: 0.5;
-}
-input:focus,
-textarea:focus{
-
-    outline: none;
-
-    border: 1px solid rgb(181, 92, 92);
-
-    box-shadow: 0 0 10px rgba(181, 92, 92, 0.4);
-
-}
-
-
-
 :root{
     --cream: blanchedalmond;
     --white: floralwhite;
@@ -291,7 +179,7 @@ textarea:focus{
 
 /* ABOUT PAGE CONTAINER */
 
-#about{
+#aboutMe{
     min-height: 100vh;
 
     background:
@@ -304,12 +192,20 @@ textarea:focus{
 
     background-size: cover;
     background-position: center;
+        padding: 40px;
+
+    display: flex;
+
+    gap: 30px;
+
+    align-items: stretch;
+
 
 }
 
 /* SECTION LAYOUT */
 
-#about section{
+#aboutMe section{
 
     background: rgba(255,255,255,0.08);
 
@@ -336,7 +232,7 @@ textarea:focus{
 
 /* HOVER EFFECT */
 
-#about section:hover{
+#aboutMe section:hover{
 
     transform: translateY(-12px);
 
@@ -345,20 +241,6 @@ textarea:focus{
 
 }
 
-/* ABOUT PAGE LAYOUT */
-
-.aboutSections{
-    padding: 40px;
-
-    display: flex;
-
-    gap: 30px;
-
-    align-items: stretch;
-
-    margin-top: 60px;
-
-}
 
 /* HERO SECTION */
 
@@ -421,7 +303,7 @@ textarea:focus{
 
 .aboutBtns button:hover{
 
-    
+    color: white;
     box-shadow: 0 8px 20px black;
 }
 
@@ -696,3 +578,114 @@ textarea:focus{
         font-size: 3rem;
     }
 }
+
+
+/*CONTACT FORM*/
+#contact{
+    background-image: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+}
+
+#contactNav{
+    box-shadow: none;
+}
+
+#contact h1{
+    margin-bottom: 20px;
+    text-align: center;
+    color: floralwhite;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 10px;
+    
+}
+@media(max-width:500px){
+    .options{
+        flex-direction: column-reverse;
+    }
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: floralwhite;
+}
+.icons ul li{
+    list-style: none;
+    margin: 10px;
+    color: black;
+}
+.icons h2{
+    text-decoration: underline;
+}
+.icons img{
+    max-height: 40px;
+    max-width: 40px;
+    margin-right: 5px;
+}
+.icons a{
+    text-decoration: none;
+    color: floralwhite;
+    transition: 0.3s;
+}
+.icons a:hover{
+    text-shadow: 4px 6px 12px aliceblue;
+    text-decoration: underline;
+
+}
+.icons a:active{
+    transition: 0.1s;
+    color: black;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: blanchedalmond;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 4px 8px 16px;
+    
+}
+form input{
+    max-width: 300px;
+    padding: 8px;
+    border: 1px solid black;
+}
+textarea{
+    max-width: 350px;
+    min-height: 150px ;
+    padding: 5px;
+}
+#submitBtn{
+    max-width: 60px;
+    padding: 8px;
+    cursor: pointer;
+    color: floralwhite;
+    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png );
+    border: none;
+    border-radius: 2px;
+    transition: 0.3s;
+    align-self: flex-end;
+}
+#submitBtn:hover{
+    box-shadow: 3px 5px 9px black;
+}
+#submitBtn:active{
+    transition: 0.1s;
+    opacity: 0.5;
+}
+input:focus,
+textarea:focus{
+
+    outline: none;
+
+    border: 1px solid rgb(181, 92, 92);
+
+    box-shadow: 0 0 10px rgba(181, 92, 92, 0.4);
+
+}
+
