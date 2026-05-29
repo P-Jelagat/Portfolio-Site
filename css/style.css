@@ -372,7 +372,7 @@ nav button:active{
 
 @media(max-width:950px){
 
-    .aboutSections{
+    #aboutMe{
 
         flex-direction: column;
     }
@@ -561,6 +561,7 @@ nav button:active{
 
 .projectBtns a:hover{
 
+    color: white;
     box-shadow: 5px 10px 20px black;
 }
 
