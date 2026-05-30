@@ -784,6 +784,13 @@ textarea:focus{
     .menuBtn{
         display: block;
     }
+    #homeImage{
+        display: none;
+    }
+    #summary {
+        font-size: small;
+        text-align: center;
+    }
 
     /* OVERRIDING TRANSITIONS FOR SMALLER SCREENS */
     .page{
