@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 body{
-    background: url(/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg);
+    background: url(/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg);
     background-size: cover;
     background-position: center;
 }
 /* NAV BAR */
 .navImage{
-    background: url(/git.ignore/images/inspos/logo.png);
+    background: url(/images/inspos/logo.png);
     background-size:cover ;
     background-position: center;
     height: 30px;
@@ -20,7 +20,7 @@ body{
 }
 
 nav{
-    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    background: url(/images/inspos/Textured\ brown\ background.png);
     display: flex;
     padding: 10px;
     justify-content: space-between;
@@ -117,7 +117,7 @@ nav{
         rgba(0,0,0,0.6)
     ),
 
-    url("/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
+    url("/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
 
     background-size: cover;
     background-position: left;
@@ -169,7 +169,7 @@ nav{
 }
 
 .buttons button{
-    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    background: url(/images/inspos/Textured\ brown\ background.png);
     color: blanchedalmond;
     padding: 10px 20px;
     margin-right: 20px;
@@ -211,7 +211,7 @@ nav{
         rgba(0,0,0,0.6)
     ),
 
-    url("/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
+    url("/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
 
     background-size: cover;
     background-position: center;
@@ -315,7 +315,7 @@ nav{
 
     cursor: pointer;
 
-    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    background: url(/images/inspos/Textured\ brown\ background.png);
 
     color: blanchedalmond;
 
@@ -422,7 +422,7 @@ nav{
         rgba(0,0,0,0.7)
     ),
 
-    url("/git.ignore/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
+    url("/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg");
 
     background-size: cover;
 
@@ -569,7 +569,7 @@ nav{
 
     border-radius: 10px;
 
-    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    background: url(/images/inspos/Textured\ brown\ background.png);
 
     color: blanchedalmond;
 
@@ -607,7 +607,7 @@ nav{
 /*CONTACT FORM*/
 #contact{
     min-height: 100VH;
-    background-image: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    background-image: url(/images/inspos/Textured\ brown\ background.png);
     padding-top: 2em;
 }
 
@@ -691,7 +691,7 @@ textarea{
     padding: 8px;
     cursor: pointer;
     color: floralwhite;
-    background: url(/git.ignore/images/inspos/Textured\ brown\ background.png );
+    background: url(/images/inspos/Textured\ brown\ background.png );
     border: none;
     border-radius: 2px;
     transition: 0.3s;
@@ -805,7 +805,7 @@ textarea:focus{
         padding: 100px 30px;
         transition: 0.3s ease;
         z-index: 999;
-        background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+        background: url(/images/inspos/Textured\ brown\ background.png);
     }
 
     .mobileMenu.open{
