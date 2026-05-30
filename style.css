@@ -790,6 +790,13 @@ textarea:focus{
     #summary {
         font-size: small;
         text-align: center;
+        margin-left: 10px;
+    }
+    .mediaLinks{
+        justify-content: center;
+    }
+    .buttons{
+        padding-left: 20px;
     }
 
     /* OVERRIDING TRANSITIONS FOR SMALLER SCREENS */
