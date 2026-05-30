@@ -13,20 +13,21 @@
 <!--Just the nav-bar contents-->
         <nav>
 
-            <img src="/git.ignore/images/inspos/logo.png" alt="">
+            <div class="navImage"></div>
+            <button class="menuBtn">&#9776;</button>
 
             <div class="navLinks">
                 
-                <a href="" class="navLink active">Home</a>
-                <a href="" class="navLink">About Me</a>
-                <a href="" class="navLink">Projects</a>
-                <a href="" class="navLink">Contact Me</a>
+                <a href="#home" class="navLink active">Home</a>
+                <a href="#aboutMe" id="hide" class="navLink">About Me</a>
+                <a href="#projectsPage" id="hide" class="navLink">Projects</a>
+                <a href="#contact" class="navLink">Contact Me</a>
 
                 <div class="underline"></div>
                 
             </div>
 
-            <button>Work Together</button>
+            <button id="work">Work Together</button>
 
 
         </nav>
@@ -58,11 +59,11 @@
 
                 <div class="mediaLinks">
                     
-                    <a href=""><img src="/git.ignore/images/icons/email.png" alt=""></a>
-                    <a href=""><img src="/git.ignore/images/icons/github.png" alt=""></a>
-                    <a href=""><img src="/git.ignore/images/icons/instagram (1).png" alt=""></a>
-                    <a href=""><img src="/git.ignore/images/icons/linkedin.png" alt=""></a>
-                    <a href=""><img src="/git.ignore/images/icons/twitter.png" alt=""></a>
+                    <a href="mailto:patiencejelagatt@gmail.com"><img src="/git.ignore/images/icons/email.png" alt=""></a>
+                    <a href="https://github.com/P-Jelagat"><img src="/git.ignore/images/icons/github.png" alt=""></a>
+                    <a href="https://www.instagram.com/patience.jelagat"><img src="/git.ignore/images/icons/instagram (1).png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/patience-jelagat-5632aa348/"><img src="/git.ignore/images/icons/linkedin.png" alt=""></a>
+                    <a href="https://x.com/PJelagat617"><img src="/git.ignore/images/icons/twitter.png" alt=""></a>
                 </div>
                 <div class="buttons">
                     <button id="view">View Resume</button>
@@ -345,11 +346,11 @@
 
 
          <form>
-            <label for="Name">Please give your name/business name:</label>
+            <label for="name">Please give your name/business name:</label>
             <input type="text" placeholder="e.g 'Pala Lume'" required name="" id="name">
 
             <label for="email">Please enter your email:</label>
-            <input type="email" name=""  placeholder="e.g 'palalume@gmail.com'" required id="email">
+            <input type="email" name="email"  placeholder="e.g 'palalume@gmail.com'" required id="email">
 
             <label for="textarea">What service do you need?</label>
             <textarea name="textarea" id="textarea" maxlength="500" placeholder="Describe the type of website, features, colors, or functionality you want." required></textarea>

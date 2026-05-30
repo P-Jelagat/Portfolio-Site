@@ -9,10 +9,13 @@ body{
     background-position: center;
 }
 /* NAV BAR */
-nav img{
+.navImage{
+    background: url(/git.ignore/images/inspos/logo.png);
+    background-size:cover ;
+    background-position: center;
     height: 30px;
     width: 30px;
-    border-radius: 50px;
+    border-radius: 150px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -51,7 +54,7 @@ nav{
     opacity: 0.6;
 }
 
-nav button{
+#work{
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -62,14 +65,23 @@ nav button{
     cursor: pointer; 
 }
 
-nav button:hover{
+#work:hover{
     transform: translateY(-5px);
     box-shadow: 3px 6px 10px black;
     color: rgb(136, 63, 4) ;
 }
 
-nav button:active{
+#work:active{
     opacity: 0.5;
+}
+
+.menuBtn{
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: floralwhite;
+    display: none;
 }
 
 
@@ -594,6 +606,7 @@ nav button:active{
 
 /*CONTACT FORM*/
 #contact{
+    min-height: 100VH;
     background-image: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
     padding-top: 2em;
 }
@@ -737,4 +750,67 @@ textarea:focus{
     transform: translateX(0);
     opacity: 1;
 }
+
+
+
+
+
+/* STOPS MENU FROM APPEARING IN LARGER SCREENS */
+ .mobileMenu{
+    display: none ;
+ }
+
+/* NAVIGATION RESPONSIVENESS ON SMALL SCREENS */
+@media(max-width:600px){
+    html{
+        scroll-behavior: smooth;
+    }
+    .navImage{
+        display: none;
+    }
+    nav{
+        padding:5px;
+        
+    }
+    nav #work{
+        display: none;
+    }
+    nav #hide{
+        display: none;
+    }
+    nav a{
+        margin: 5px;
+    }
+    .menuBtn{
+        display: block;
+    }
+
+    /* OVERRIDING TRANSITIONS FOR SMALLER SCREENS */
+    .page{
+        display: block;
+        width: 100%;
+    }
+    
+
+    /* STYLING THE MENU */
+    .mobileMenu{
+        position: fixed;
+        top: 0;
+        left: -300px;
+        min-width: 150px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 100px 30px;
+        transition: 0.3s ease;
+        z-index: 999;
+        background: url(/git.ignore/images/inspos/Textured\ brown\ background.png);
+    }
+
+    .mobileMenu.open{
+        left: 0;
+    }
+}
+
 

@@ -4,13 +4,16 @@ const underline = document.querySelector('.underline');
 
 // THIS IS FOR THE UNDERLINE MOVEMENT ALONG THE NAVBAR
 navLinks.forEach( (navLink, index) => {
-   navLink.addEventListener('click', (e)=>{
+    if(window.innerWidth > 600){
+    navLink.addEventListener('click', (e)=>{
     e.preventDefault();
     removeActiveClass();
     navLink.classList.add("active");
     moveUnderline(navLink);
     changePage(index);
    })
+    }
+
 
 });
 
@@ -62,3 +65,42 @@ function changePage(newIndex){
 moveUnderline(
     document.querySelector('.active')
 );
+
+
+// CREATING THE DROP-DOWN MENU ON SMALLER SCREENS WHEN MENU BUTTON IS CLICKED
+ const menuBtn = document.querySelector('.menuBtn');
+ const mobileMenu = document.createElement('div');
+
+ mobileMenu.classList.add('mobileMenu');
+
+ mobileMenu.innerHTML = `
+    <a href="#home" class="navLink" data-page="0">Home</a>
+    <a href="#aboutMe" class="navLink" data-page="1">About Me</a>
+    <a href="#projectsPage" class="navLink" data-page="2">Projects</a>
+    <a href="#contact" class="navLink" data-page="3">Contact Me</a>
+`;
+
+document.body.appendChild(mobileMenu);
+
+
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+})
+
+// TO CLOSE MENU WHEN YOU TAP OUTSIDE IT
+document.addEventListener('click', (e)=>{
+
+    const clickedMenu =
+    mobileMenu.contains(e.target);
+
+    const clickedMenuBtn =
+    menuBtn.contains(e.target);
+
+    if(
+        !clickedMenu &&
+        !clickedMenuBtn
+    ){
+        mobileMenu.classList.remove('open');
+    }
+
+});
