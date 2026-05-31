@@ -7,6 +7,7 @@ body{
     background: url(/images/inspos/muhammad-asyfaul-_eqdJnXZz1I-unsplash.jpg);
     background-size: cover;
     background-position: center;
+    overflow-x: hidden;
 }
 /* NAV BAR */
 .navImage{
@@ -197,11 +198,8 @@ nav{
     opacity: 0.5;
 }
 
-@media(max-width:600px){
+@media(max-width:500px){
     /* HOMEPAGE MOBILE RESPONSIVENESS */
-    #home{
-        padding: 70px;
-    }
     #homeImage{
         display: none;
     }
@@ -411,7 +409,7 @@ nav{
 
 /* RESPONSIVENESS */
 
-@media(max-width:950px){
+@media(max-width: 950px){
 
     #aboutMe{
 
@@ -606,9 +604,9 @@ nav{
     box-shadow: 5px 10px 20px black;
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVENESS */
 
-@media(max-width:768px){
+@media(max-width:600px){
 
     #projectsPage{
 
@@ -619,9 +617,15 @@ nav{
 
         font-size: 3rem;
     }
-    .projectCard{
+    /* .projectCard{
         width: 280px;
-    }
+    } */
+    .projectsContainer{
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+}
+ 
+
 }
 
 
