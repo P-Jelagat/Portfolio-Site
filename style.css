@@ -85,6 +85,7 @@ nav{
 }
 
 
+
 /* STYLING THE UNDERLINE */
 .underline{
     position: absolute;
@@ -93,6 +94,10 @@ nav{
     background-color: blanchedalmond;
     border-radius: 10px;
     transition: 0.4s ease;
+}
+
+.pageContent{
+    min-width: 100vw;
 }
 
 
@@ -190,6 +195,19 @@ nav{
 
 .buttons button:active{
     opacity: 0.5;
+}
+
+@media(max-width:600px){
+    /* HOMEPAGE MOBILE RESPONSIVENESS */
+    #home{
+        padding: 70px;
+    }
+    #homeImage{
+        display: none;
+    }
+    #summary h1{
+        font-size: 1.5em;
+    }
 }
 
 
@@ -391,7 +409,7 @@ nav{
 
 }
 
-/* RESPONSIVE */
+/* RESPONSIVENESS */
 
 @media(max-width:950px){
 
@@ -601,6 +619,9 @@ nav{
 
         font-size: 3rem;
     }
+    .projectCard{
+        width: 280px;
+    }
 }
 
 
@@ -784,20 +805,7 @@ textarea:focus{
     .menuBtn{
         display: block;
     }
-    #homeImage{
-        display: none;
-    }
-    #summary {
-        font-size: small;
-        text-align: center;
-        margin-left: 10px;
-    }
-    .mediaLinks{
-        justify-content: center;
-    }
-    .buttons{
-        padding-left: 20px;
-    }
+
 
     /* OVERRIDING TRANSITIONS FOR SMALLER SCREENS */
     .page{
