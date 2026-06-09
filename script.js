@@ -29,6 +29,16 @@ function moveUnderline(navLink){
 
 moveUnderline(document.querySelector('.active'));
 
+window.addEventListener('resize', () => {
+
+    const activeLink =
+    document.querySelector('.active');
+
+    if(activeLink){
+        moveUnderline(activeLink);
+    }
+
+});
 
 // THIS IS FOR THE PAGE TRANSITIONS
 
